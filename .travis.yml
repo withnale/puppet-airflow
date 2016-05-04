@@ -7,7 +7,7 @@ matrix:
   include:
   - rvm: 2.1.6
     dist: trusty
-    env: PUPPET_VERSION="~> 3.8.0" PUPPET_INSTALL_TYPE=agent BEAKER_debug=true BEAKER_set=docker-ubuntu-1204-x64
+    env: BEAKER_debug=true BEAKER_set=docker-ubuntu-1204-x64
     script: bundle exec rake beaker
     services: docker
     sudo: required
