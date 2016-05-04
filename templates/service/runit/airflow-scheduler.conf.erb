@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export AIRFLOW_HOME=<%= @home_folder %>
+
+exec 2>&1
+
+exec chpst \
+-u <%= @user %> -- \
+<%= @pip_bin_path %>/airflow scheduler
